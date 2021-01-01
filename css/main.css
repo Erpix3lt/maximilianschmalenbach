@@ -1,0 +1,140 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: white;
+}
+
+#tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+#maximilianSchmalenbachTab {
+  background-color: black;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9em;
+  color: #e3e3e3;
+  font-weight: light;
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+button:focus {
+  outline: 0;
+  font-style: italic;
+}
+
+#projectsTab {
+  background-color: black;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9em;
+  color: #e3e3e3;
+  font-weight: light;
+}
+
+#copyright {
+  background-color: black;
+  font-family: 'Poppins', sans-serif;
+  color: #e1e1e1;
+  font-size: 0.8em;
+}
+
+#tabs {
+  text-align: right;
+  position: absolute;
+  top: 40%;
+  left: 7%;
+}
+
+#maximilianSchmalenbach {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+}
+
+#maximilianSchmalenbachText {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1em;
+  color: #5c5c5c;
+  font-weight: light;
+}
+
+.maximilianSchmalenbachInfo {
+  padding-right: 0.4em;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9em;
+  color: #393939;
+  font-weight: light;
+  font-style: italic;
+}
+
+#projects {
+  display: none;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  overflow-y: scroll;
+  height: 180px;
+}
+
+#content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#projectHeading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9em;
+  color: #454545;
+  font-weight: regular;
+}
+
+#projectDescription {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9em;
+  color: #555555;
+  font-weight: light;
+}
+
+#projectInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9em;
+  color: #606060;
+}
+
+#projectLink {
+  text-decoration: none;
+  cursor: pointer;
+  color: #2b2bff;
+  padding-right: 1em;
+}
+
+img {
+  top: 50%;
+  -webkit-transform: translate(-35%, -50%);
+          transform: translate(-35%, -50%);
+  position: fixed;
+  height: 99vh;
+  width: auto;
+}
+/*# sourceMappingURL=main.css.map */
