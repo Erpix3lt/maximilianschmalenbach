@@ -8,9 +8,9 @@ let currentYear = new Date().getFullYear();
             Interested in design, photography, architecture. <a href="">view projects</a>
     </div>
     <div class="social-wrapper">
+        <a href="">maximilian.schmalenbach@gmail.com</a> |
         <a href="instragram.com">instragram</a>
         <a href="github.com">github</a>
-        <a href="">maximilian.schmalenbach@gmail.com</a>
     </div>
     <div class="copyright-wrapper">
         © {currentYear} Maximilian Schmalenbach
@@ -24,7 +24,7 @@ let currentYear = new Date().getFullYear();
         justify-content: center;
     }
     .about-wrapper{
-        width: 50%;
+        width: 40%;
         text-align: center;
     }
    
