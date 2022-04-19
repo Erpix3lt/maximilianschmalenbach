@@ -1,31 +1,29 @@
 <script type="ts">
     import Post from './post.svelte'
-    import * as myjson from './blog.json'
+    import blogAsJSON from './blog.json'
     import { readingTime } from 'reading-time-estimator';
-
-    let topic : string = myjson.blog[1].topic;
-
-    let description : string = myjson.blog[1].description;
-
-    let date : string = myjson.blog[1].date;
-
-    let link : string = myjson.blog[1].link;
-
-    const result = readingTime(description);
 
 </script>
 
-<div class="post-wrapper">
-    <hr>
-    <Post>
-        <h1>{topic}</h1>
-        <p class="description">{description}</p>
-        <div class="info-wrapper">
-            <p class="date">{date}</p>
-            <p class="read-time">{result.text}</p>
+    <div class="post-wrapper">
+        <div class="section-header">
+            <p>BLOG</p>
+            <hr>
         </div>
-    </Post>
-</div>
+        {#each blogAsJSON as post}
+        <Post>
+            <h1>{post.topic}</h1>
+            <p class="description">{post.description}</p>
+            <div class="info-wrapper">
+                <p class="date">{post.date}</p>
+                <p class="read-time">{readingTime(post.description).text}</p>
+            </div>
+        </Post>
+        {/each}
+    </div>
+
+
+
 <style>
 .post-wrapper{
     width: 60%;
@@ -47,6 +45,23 @@ h1{
     color: #FF9C9C;
     font-size: .8em;
 
+}
+
+.section-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.section-header p {
+    color: lightgray;
+    padding-right: 1em;
+}
+
+hr { 
+    background-color: #2F5371; height: 1px; 
+    border: 0;
+    width: 100%;
 }
 
 .read-time{

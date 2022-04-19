@@ -3,8 +3,8 @@
 	import LowLevelHeader from '$lib/components/lowLevelHeader.svelte'
 	import Footer from '$lib/components/footer.svelte'
 	import Blog from '$lib/components/blog/blog.svelte'
-	import LatestArticle from '$lib/components/blog/latestArticle.svelte'
-import About from '$lib/components/about.svelte'
+	import About from '$lib/components/about.svelte'
+import LatestArticle from '$lib/components/blog/latestArticle.svelte'
 </script>
 <div class="content-wrapper">
 	<TopLevelHeader/>
@@ -25,7 +25,7 @@ import About from '$lib/components/about.svelte'
 	}
 	.content-wrapper{
 		margin: 0 auto;
-		width: 90%;
+		width: 80%;
 	}
 	:global(body) {
 		font-family: 'Montserrat', sans-serif;
