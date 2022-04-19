@@ -1,22 +1,34 @@
 <script>
-	import Info from '$lib/components/info.svelte'
-	import Scene from '$lib/components/model/scene.svelte'
+	import TopLevelHeader from '$lib/components/topLevelHeader.svelte'
+	import LowLevelHeader from '$lib/components/lowLevelHeader.svelte'
+	import Footer from '$lib/components/footer.svelte'
+	import Blog from '$lib/components/blog/blog.svelte'
+	import LatestArticle from '$lib/components/blog/latestArticle.svelte'
+import About from '$lib/components/about.svelte'
 </script>
-<h2>Hello and Welcome</h2>
 <div class="content-wrapper">
-	<Scene></Scene>
-	<Info></Info>
+	<TopLevelHeader/>
+	<LowLevelHeader/>
+	<LatestArticle/>
+	<div class="info-wrapper">
+		<Blog/>
+		<About/>
+	</div>
+	<Footer/>
 </div>
 
 <style>
-	.content-wrapper{
+	.info-wrapper{
+		justify-content: space-between;
 		display: flex;
-		flex-direction: column;
-		align-items: center;
+		flex-direction: row;
+	}
+	.content-wrapper{
+		margin: 0 auto;
+		width: 90%;
 	}
 	:global(body) {
-		font-family: 'Courier New', Courier, monospace;
+		font-family: 'Montserrat', sans-serif;
 		background-color: #1d3040;
-		color: white;
 	}
 </style>

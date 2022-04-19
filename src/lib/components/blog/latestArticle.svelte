@@ -14,38 +14,40 @@
     const result = readingTime(description);
 
 </script>
-
 <div class="post-wrapper">
-    <hr>
     <Post>
+        <p class="date">LATEST {date}</p>
         <h1>{topic}</h1>
         <p class="description">{description}</p>
         <div class="info-wrapper">
-            <p class="date">{date}</p>
             <p class="read-time">{result.text}</p>
         </div>
     </Post>
 </div>
 <style>
 .post-wrapper{
-    width: 60%;
+    padding-top: 5em;
+    padding-bottom: 5em;
+
+    width: 80%;
 }
 .info-wrapper{
     display: flex;
     flex-direction: row;
 }
 h1{
+    font-size: 5em;
     margin: 0;
     color: white;
 }
 .description{
     color: lightgray;
-    font-size: 1.2em;
+    font-size: 2em;
 }
 .date{
     padding-right: 1em;
     color: #FF9C9C;
-    font-size: .8em;
+    font-size: 1.2em;
 
 }
 

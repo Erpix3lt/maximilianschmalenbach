@@ -1,7 +1,8 @@
 {
     "blog": {
         "1" :{
-            "name": "birds-on-bikes",
+            "topic": "Garments Digital",
+            "description": "How can we responsibly use data to make good predictions? What separates good theories from bad ones? Here I discuss drawing the wrong conclusions and the telltale signs of good explanations.",
             "date": "08-04-2021",
             "link": "https://www.w3docs.com/snippets/css/how-to-set-space-between-flexbox-items.html"
         }
