@@ -1,21 +1,45 @@
 <script type="ts">
-    import Post from './post.svelte'
     import blogAsJSON from './blog.json'
     import { readingTime } from 'reading-time-estimator';
 
+    let blogAsJSONFiltered = [];
+    
+    export let tag;
 
+    try{
+        blogAsJSON.forEach(post => {
+            if(post.tag === tag){
+                blogAsJSONFiltered.push(post);
+            }
+        });
+
+        if(blogAsJSONFiltered.length == 0){
+            blogAsJSONFiltered[0] = {
+                id: null,
+                topic: "ERROR",
+                description: "Error - Your searched post was not found",
+                date: "",
+                link: "",
+                tag: "error - message"
+            }
+        }
+    } catch(error){
+        console.log("an errror happened, trying to filter the blog posts", error)
+    }
 
 </script>
 <div class="post-wrapper">
+    {#each blogAsJSONFiltered as post}
 
-        <p class="date">LATEST {blogAsJSON[0].date}</p>
-        <h1>{blogAsJSON[0].topic}</h1>
-        <p class="description">{blogAsJSON[0].description}</p>
+        <h1>{post.topic}</h1>
+        <p class="date">{post.date}</p>    
+        <p class="description">{post.description}</p>
         <div class="info-wrapper">
-            <p class="read-time">{readingTime(blogAsJSON[0].description).text}</p>
-            <p class="tag">#{blogAsJSON[0].tag}</p>
+            <p class="read-time">{readingTime(post.description).text}</p>
+            <p class="tag">#{post.tag}</p>
         </div>
 
+    {/each}
 </div>
 <style>
 .post-wrapper{
@@ -27,6 +51,7 @@
 .info-wrapper{
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 h1{
     font-size: 5em;

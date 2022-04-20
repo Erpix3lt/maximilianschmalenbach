@@ -1,20 +1,26 @@
 [      
   {
+      "id": 1,
       "topic": "Garments Digital",
       "description": "How can we responsibly use data to make good predictions? What separates good theories from bad ones? Here I discuss drawing the wrong conclusions and the telltale signs of good explanations.",
       "date": "08-04-2021",
-      "link": "https://www.w3docs.com/snippets/css/how-to-set-space-between-flexbox-items.html"
+      "link": "https://www.w3docs.com/snippets/css/how-to-set-space-between-flexbox-items.html",
+      "tag": "development"
   },
   {
+    "id": 2,
     "topic": "Garments Digital",
     "description": "How can we responsibly use data to make good predictions? What separates good theories from bad ones? Here I discuss drawing the wrong conclusions and the telltale signs of good explanations.",
     "date": "08-04-2021",
-    "link": "https://www.w3docs.com/snippets/css/how-to-set-space-between-flexbox-items.html"
+    "link": "https://www.w3docs.com/snippets/css/how-to-set-space-between-flexbox-items.html",
+    "tag": "sers"
   },
   {
+    "id": 3,
     "topic": "Garments Digital",
     "description": "How can we responsibly use data to make good predictions? What separates good theories from bad ones? Here I discuss drawing the wrong conclusions and the telltale signs of good explanations.",
     "date": "08-04-2021",
-    "link": "https://www.w3docs.com/snippets/css/how-to-set-space-between-flexbox-items.html"
+    "link": "https://www.w3docs.com/snippets/css/how-to-set-space-between-flexbox-items.html",
+    "tag": "sers"
   }
 ]

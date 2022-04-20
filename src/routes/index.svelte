@@ -4,7 +4,7 @@
 	import Footer from '$lib/components/footer.svelte'
 	import Blog from '$lib/components/blog/blog.svelte'
 	import About from '$lib/components/about.svelte'
-import LatestArticle from '$lib/components/blog/latestArticle.svelte'
+	import LatestArticle from '$lib/components/blog/latestArticle.svelte'
 </script>
 <div class="content-wrapper">
 	<TopLevelHeader/>
@@ -31,4 +31,10 @@ import LatestArticle from '$lib/components/blog/latestArticle.svelte'
 		font-family: 'Montserrat', sans-serif;
 		background-color: #1d3040;
 	}
+
+	:global(body.light-mode) {
+		background-color: #DFCECD;
+	}
+
+
 </style>

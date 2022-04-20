@@ -11,14 +11,15 @@
             <hr>
         </div>
         {#each blogAsJSON as post}
-        <Post>
+
             <h1>{post.topic}</h1>
+            <p class="tag">#{post.tag}</p>
             <p class="description">{post.description}</p>
             <div class="info-wrapper">
                 <p class="date">{post.date}</p>
                 <p class="read-time">{readingTime(post.description).text}</p>
             </div>
-        </Post>
+
         {/each}
     </div>
 
@@ -64,8 +65,45 @@ hr {
     width: 100%;
 }
 
+.tag {
+    color: rgb(170, 194, 219);
+    font-size: .8em;
+}
+
 .read-time{
     color: lightslategrey;
     font-size: .8em;
 }
+
+:global(body.light-mode) h1{
+            color: #000000;
+    }
+
+    :global(body.light-mode) h2{
+            color: #1d3040;
+    }
+
+    :global(body.light-mode) h3{
+            color: #1d3040;
+    }
+
+    :global(body.light-mode) hr{
+        background-color: #D8B7B5;
+    }
+
+    :global(body.light-mode) p{
+            color: #2c4961;
+    }
+
+    :global(body.light-mode) a{
+            color: #7b4949;
+    }
+
+    :global(body.light-mode) .date{
+            color: #7b4949;
+    }
+
+    :global(body.light-mode) .read-time{
+            color: #538ab7;
+    }
 </style>

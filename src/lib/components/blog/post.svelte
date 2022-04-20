@@ -1,11 +1,88 @@
 <script>
+    import { readingTime } from 'reading-time-estimator';
 
+    export let post;
 </script>
 
-<div class="card-content">
-    <slot></slot>
+<div class="post-wrapper">
+   
+    <p class="date">LATEST {post.date}</p>
+    <h1>{post.topic}</h1>
+    <p class="description">{post.description}</p>
+    <div class="info-wrapper">
+        <p class="read-time">{readingTime(post.description).text}</p>
+        <p class="tag">#{post.tag}</p>
+    </div>
+
 </div>
 
 <style>
+.post-wrapper{
+    padding-top: 4em;
+    padding-bottom: 5em;
 
+    width: 80%;
+}
+.info-wrapper{
+    display: flex;
+    flex-direction: row;
+}
+h1{
+    font-size: 5em;
+    margin: 0;
+    color: white;
+}
+.description{
+    color: lightgray;
+    font-size: 2em;
+}
+.date{
+    padding-right: 1em;
+    color: #FF9C9C;
+    font-size: 1.2em;
+
+}
+
+.tag {
+    padding-left: 1.5em;
+    color: rgb(170, 194, 219);
+    font-size: .8em;
+}
+
+.read-time{
+    color: lightslategrey;
+    font-size: .8em;
+}
+
+:global(body.light-mode) h1{
+            color: #000000;
+    }
+
+    :global(body.light-mode) h2{
+            color: #1d3040;
+    }
+
+    :global(body.light-mode) h3{
+            color: #1d3040;
+    }
+
+    :global(body.light-mode) hr{
+            color: #D8B7B5;
+    }
+
+    :global(body.light-mode) p{
+            color: #2c4961;
+    }
+
+    :global(body.light-mode) a{
+            color: #7b4949;
+    }
+
+    :global(body.light-mode) .date{
+            color: #7b4949;
+    }
+
+    :global(body.light-mode) .read-time{
+            color: #538ab7;
+    }
 </style>
