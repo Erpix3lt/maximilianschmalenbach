@@ -29,7 +29,8 @@
     flex-direction: row;
 }
 h1{
-    font-size: 5em;
+    font-family: 'PT Serfif',serif;
+    font-size: 6em;
     margin: 0;
     color: white;
 }
@@ -56,27 +57,12 @@ h1{
 }
 
 :global(body.light-mode) h1{
-            color: #000000;
-    }
-
-    :global(body.light-mode) h2{
-            color: #1d3040;
-    }
-
-    :global(body.light-mode) h3{
-            color: #1d3040;
-    }
-
-    :global(body.light-mode) hr{
-            color: #D8B7B5;
-    }
+    font-family: 'PT Serfif',serif;
+    color: #000000;
+}
 
     :global(body.light-mode) p{
             color: #2c4961;
-    }
-
-    :global(body.light-mode) a{
-            color: #7b4949;
     }
 
     :global(body.light-mode) .date{

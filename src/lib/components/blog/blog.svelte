@@ -11,7 +11,10 @@
             <hr>
         </div>
         {#each blogAsJSON as post}
-
+        <div class="post">
+        <div class="post-border">
+            <div class="item-border">
+        
             <h1>{post.topic}</h1>
             <p class="tag">#{post.tag}</p>
             <p class="description">{post.description}</p>
@@ -19,13 +22,34 @@
                 <p class="date">{post.date}</p>
                 <p class="read-time">{readingTime(post.description).text}</p>
             </div>
-
+        </div>
+        </div>
+        </div>
         {/each}
     </div>
 
 
 
 <style>
+
+.post{
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.post-border{
+    padding: 1em;
+    background-color: rgba(0, 0, 0, 0.114);
+    border-radius: 10px;
+}
+
+:global(body.light-mode) .post-border{
+    background-color: rgba(255, 255, 255, 0.114);
+}
+
+.item-border{
+    padding: 1em;
+}
 .post-wrapper{
     width: 60%;
 }
@@ -70,33 +94,21 @@ hr {
     font-size: .8em;
 }
 
-.read-time{
-    color: lightslategrey;
-    font-size: .8em;
-}
-
-:global(body.light-mode) h1{
-            color: #000000;
+    .read-time{
+        color: lightslategrey;
+        font-size: .8em;
     }
 
-    :global(body.light-mode) h2{
-            color: #1d3040;
-    }
-
-    :global(body.light-mode) h3{
-            color: #1d3040;
+    :global(body.light-mode) h1{
+        color: #000000;
     }
 
     :global(body.light-mode) hr{
-        background-color: #D8B7B5;
+        background-color: #b99b99;
     }
 
     :global(body.light-mode) p{
-            color: #2c4961;
-    }
-
-    :global(body.light-mode) a{
-            color: #7b4949;
+        color: #2c4961;
     }
 
     :global(body.light-mode) .date{

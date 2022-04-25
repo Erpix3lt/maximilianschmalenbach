@@ -6,6 +6,7 @@
         <p>ABOUT</p>
         <hr>
     </div>
+    <!-- svelte-ignore a11y-img-redundant-alt -->
     <img src="https://i.ibb.co/DLNKz73/profile-Picture.png" alt="profile-Picture"/>
     <h3>MaxSchmalenbach.co</h3>
     <p>
@@ -15,12 +16,12 @@
     </p>
     <div class="social">
         <p>The best place to get a hold of me, is to shoot me a dm on
-        <a href="">instagram</a></p>
+        <a href="https://www.instagram.com/maximilianschmalenbach/">instagram</a></p>
     </div>
 </div>
 <style>
     .about-wrapper{
-        width: 30%;
+        width: 30%;    
     }
     a{
         color: #FF9C9C;
@@ -55,20 +56,12 @@
         width: 100%;
     }
 
-    :global(body.light-mode) h1{
-            color: #000000;
-    }
-
-    :global(body.light-mode) h2{
-            color: #1d3040;
-    }
-
     :global(body.light-mode) h3{
             color: #1d3040;
     }
 
     :global(body.light-mode) hr{
-        background-color: #D8B7B5;
+        background-color: #b99b99;
     }
 
     :global(body.light-mode) p{

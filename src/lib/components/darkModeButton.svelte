@@ -16,8 +16,8 @@
     font-size: 17px;
     position: relative;
     display: inline-block;
-    width: 3.7em;
-    height: 1.8em;
+    width: 2.7em;
+    height: 1.4em;
     }
 
     .switch input {
@@ -42,8 +42,8 @@
     .slider:before {
     position: absolute;
     content: "";
-    height: 1.4em;
-    width: 1.4em;
+    height: 1em;
+    width: 1em;
     border-radius: 20px;
     left: 0.2em;
     bottom: 0.2em;
@@ -64,7 +64,7 @@
     }
 
     input:checked + .slider:before {
-    transform: translateX(1.9em);
+    transform: translateX(1.2em);
     }
 
 </style>

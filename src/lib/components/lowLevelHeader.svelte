@@ -61,25 +61,8 @@ import blogAsJSON from './blog/blog.json'
     }
     hr { background-color: #2F5371; height: 1px; border: 0; }
 
-
-    :global(body.light-mode) h1{
-            color: #000000;
-    }
-
-    :global(body.light-mode) h2{
-            color: #1d3040;
-    }
-
-    :global(body.light-mode) h3{
-            color: #1d3040;
-    }
-
     :global(body.light-mode) hr{
-        background-color: #D8B7B5;
-    }
-
-    :global(body.light-mode) p{
-            color: #2c4961;
+        background-color: #b99b99;
     }
 
     :global(body.light-mode) a{
