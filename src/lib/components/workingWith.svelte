@@ -1,4 +1,3 @@
-
 <div class="content-wrapper">
 <hr>
 <div>
