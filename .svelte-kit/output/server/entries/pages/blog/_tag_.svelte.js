@@ -1,7 +1,6 @@
 import { c as create_ssr_component, a as each, e as escape, v as validate_component } from "../../../chunks/index-756e41cf.js";
-import { b as blogAsJSON } from "../../../chunks/blog-6dac7dba.js";
-import { readingTime } from "reading-time-estimator";
-import { T as TopLevelHeader, L as LowLevelHeader, F as Footer } from "../../../chunks/topLevelHeader-f702c3e8.js";
+import { b as blogAsJSON, r as readingTime } from "../../../chunks/time-32f85e35.js";
+import { T as TopLevelHeader, L as LowLevelHeader, F as Footer } from "../../../chunks/topLevelHeader-89f409fd.js";
 var dynamicBlog_svelte_svelte_type_style_lang = "";
 const css$1 = {
   code: ".post-wrapper.svelte-13w78gm{padding-top:4em;padding-bottom:5em;width:80%}.info-wrapper.svelte-13w78gm{display:flex;flex-direction:row;align-items:center}h1.svelte-13w78gm{font-size:5em;margin:0;color:white}.description.svelte-13w78gm{color:lightgray;font-size:2em}.date.svelte-13w78gm{padding-right:1em;color:#FF9C9C;font-size:1.2em}.tag.svelte-13w78gm{padding-left:1.5em;color:rgb(170, 194, 219);font-size:.8em}.read-time.svelte-13w78gm{color:lightslategrey;font-size:.8em}body.light-mode h1.svelte-13w78gm{color:#000000}body.light-mode p.svelte-13w78gm{color:#2c4961}body.light-mode .date.svelte-13w78gm{color:#7b4949}body.light-mode .read-time.svelte-13w78gm{color:#538ab7}",
@@ -36,7 +35,7 @@ const DynamicBlog = create_ssr_component(($$result, $$props, $$bindings, slots) 
     return `<h1 class="${"svelte-13w78gm"}">${escape(post.topic)}</h1>
         <p class="${"date svelte-13w78gm"}">${escape(post.date)}</p>    
         <p class="${"description svelte-13w78gm"}">${escape(post.description)}</p>
-        <div class="${"info-wrapper svelte-13w78gm"}"><p class="${"read-time svelte-13w78gm"}">${escape(readingTime(post.description).text)}</p>
+        <div class="${"info-wrapper svelte-13w78gm"}"><p class="${"read-time svelte-13w78gm"}">${escape(readingTime(post.description))}</p>
             <a class="${"tag svelte-13w78gm"}" href="${"/blog/" + escape(post.tag)}">#${escape(post.tag)}</a>
         </div>`;
   })}

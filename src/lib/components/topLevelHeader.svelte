@@ -1,7 +1,7 @@
 <script>
 
 </script>
-    <a href="./"><h2>MaxSchmalenbach.co</h2></a>
+    <a href="./"><h2>MaxSchmalenbach</h2></a>
 <style>
     h2{
         padding-top: .8em;

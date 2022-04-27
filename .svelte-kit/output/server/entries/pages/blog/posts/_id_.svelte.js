@@ -1,7 +1,7 @@
 import { c as create_ssr_component, e as escape, v as validate_component } from "../../../../chunks/index-756e41cf.js";
-import { b as blogAsJSON } from "../../../../chunks/blog-6dac7dba.js";
-import { readingTime } from "reading-time-estimator";
-/* empty css                                                              */import { T as TopLevelHeader, L as LowLevelHeader, F as Footer } from "../../../../chunks/topLevelHeader-f702c3e8.js";
+import { r as readingTime, b as blogAsJSON } from "../../../../chunks/time-32f85e35.js";
+import { T as TopLevelHeader, L as LowLevelHeader, F as Footer } from "../../../../chunks/topLevelHeader-89f409fd.js";
+var post_svelte_svelte_type_style_lang = "";
 const css$1 = {
   code: ".post-wrapper.svelte-11i0ivv{padding-top:4em;padding-bottom:5em;width:80%}.info-wrapper.svelte-11i0ivv{display:flex;flex-direction:row;align-items:center}h1.svelte-11i0ivv{font-size:5em;margin:0;color:white}.description.svelte-11i0ivv{color:lightgray;font-size:2em}.date.svelte-11i0ivv{padding-right:1em;color:#FF9C9C;font-size:1.2em}.tag.svelte-11i0ivv{padding-left:1.5em;color:rgb(170, 194, 219);font-size:.8em;text-decoration:none}.read-time.svelte-11i0ivv{color:lightslategrey;font-size:.8em}body.light-mode h1.svelte-11i0ivv{color:#000000}body.light-mode p.svelte-11i0ivv{color:#2c4961}body.light-mode .date.svelte-11i0ivv{color:#7b4949}body.light-mode .read-time.svelte-11i0ivv{color:#538ab7}",
   map: null
@@ -14,7 +14,7 @@ const Post = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<div class="${"post-wrapper svelte-11i0ivv"}"><p class="${"date svelte-11i0ivv"}">LATEST ${escape(post.date)}</p>
     <h1 class="${"svelte-11i0ivv"}">${escape(post.topic)}</h1>
     <p class="${"description svelte-11i0ivv"}">${escape(post.description)}</p>
-    <div class="${"info-wrapper svelte-11i0ivv"}"><p class="${"read-time svelte-11i0ivv"}">${escape(readingTime(post.description).text)}</p>
+    <div class="${"info-wrapper svelte-11i0ivv"}"><p class="${"read-time svelte-11i0ivv"}">${escape(readingTime(post.description))}</p>
         <a class="${"tag svelte-11i0ivv"}" href="${"/blog/" + escape(post.tag)}">#${escape(post.tag)}</a></div>
 
 </div>`;

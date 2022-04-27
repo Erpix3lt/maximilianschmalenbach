@@ -1,5 +1,4 @@
 <script>
-import Scene from "./model/scene.svelte";
 import WorkingWith from "./workingWith.svelte";
 
 </script>

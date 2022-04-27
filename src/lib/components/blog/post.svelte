@@ -1,5 +1,5 @@
 <script>
-    import { readingTime } from 'reading-time-estimator';
+    import {readingTime} from './time'
 
     export let post;
 </script>
@@ -10,7 +10,7 @@
     <h1>{post.topic}</h1>
     <p class="description">{post.description}</p>
     <div class="info-wrapper">
-        <p class="read-time">{readingTime(post.description).text}</p>
+        <p class="read-time">{readingTime(post.description)}</p>
         <a class="tag" href="/blog/{post.tag}">
             #{post.tag}
         </a>

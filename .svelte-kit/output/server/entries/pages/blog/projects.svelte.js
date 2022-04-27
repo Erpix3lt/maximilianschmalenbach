@@ -1,7 +1,6 @@
 import { c as create_ssr_component, v as validate_component } from "../../../chunks/index-756e41cf.js";
-import { B as Blog } from "../../../chunks/blog-2e3316c4.js";
-import "../../../chunks/blog-6dac7dba.js";
-import "reading-time-estimator";
+import { B as Blog } from "../../../chunks/blog-67dc6d74.js";
+import "../../../chunks/time-32f85e35.js";
 var projects_svelte_svelte_type_style_lang = "";
 const css = {
   code: "body{font-family:'Courier New', Courier, monospace;background-color:#0c141a;color:white}",

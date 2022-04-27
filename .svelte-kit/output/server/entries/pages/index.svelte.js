@@ -1,31 +1,28 @@
 import { c as create_ssr_component, v as validate_component, e as escape } from "../../chunks/index-756e41cf.js";
-import { T as TopLevelHeader, L as LowLevelHeader, F as Footer } from "../../chunks/topLevelHeader-f702c3e8.js";
-import { B as Blog } from "../../chunks/blog-2e3316c4.js";
-import "three";
-import "three/examples/jsm/loaders/GLTFLoader.js";
-import { readingTime } from "reading-time-estimator";
-/* empty css                                                        */import { b as blogAsJSON } from "../../chunks/blog-6dac7dba.js";
+import { T as TopLevelHeader, L as LowLevelHeader, F as Footer } from "../../chunks/topLevelHeader-89f409fd.js";
+import { B as Blog } from "../../chunks/blog-67dc6d74.js";
+import { b as blogAsJSON, r as readingTime } from "../../chunks/time-32f85e35.js";
 var workingWith_svelte_svelte_type_style_lang = "";
 const css$3 = {
-  code: ".content-wrapper.svelte-1ignxrf{padding-top:1.5em}img.svelte-1ignxrf{width:30px;height:auto;padding:1.5em;padding-left:0em}div.svelte-1ignxrf{display:flex;flex-wrap:wrap;justify-content:flex-start}hr.svelte-1ignxrf{background-color:#2F5371;height:1px;border:0;width:100%}body.light-mode hr.svelte-1ignxrf{background-color:#b99b99}@media screen and (max-width: 992px){div.svelte-1ignxrf{justify-content:space-evenly}}",
+  code: ".content-wrapper.svelte-14tx834.svelte-14tx834{padding-top:1.5em}img.svelte-14tx834.svelte-14tx834{width:30px;height:auto;padding:1.5em;padding-left:0em}.content-wrapper.svelte-14tx834 div.svelte-14tx834{display:flex;flex-wrap:wrap;justify-content:flex-start}hr.svelte-14tx834.svelte-14tx834{background-color:#2F5371;height:1px;border:0;width:100%}body.light-mode hr.svelte-14tx834.svelte-14tx834{background-color:#b99b99}@media screen and (max-width: 992px){div.svelte-14tx834.svelte-14tx834{justify-content:space-evenly}}",
   map: null
 };
 const WorkingWith = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$3);
-  return `<div class="${"content-wrapper svelte-1ignxrf"}"><hr class="${"svelte-1ignxrf"}">
-<div class="${"svelte-1ignxrf"}"><img src="${"./techstack/appium.svg"}" alt="${"appiumn"}" class="${"svelte-1ignxrf"}">
-    <img src="${"./techstack/figma.svg"}" alt="${"figma"}" class="${"svelte-1ignxrf"}">
-    <img src="${"./techstack/git-icon.svg"}" alt="${"git"}" class="${"svelte-1ignxrf"}">
-    <img src="${"./techstack/java.svg"}" alt="${"java"}" class="${"svelte-1ignxrf"}">
-    <img src="${"./techstack/javascript.svg"}" alt="${"js"}" class="${"svelte-1ignxrf"}">
-    <img src="${"./techstack/nodejs-icon.svg"}" alt="${"node"}" class="${"svelte-1ignxrf"}">
-    <img src="${"./techstack/python.svg"}" alt="${"python"}" class="${"svelte-1ignxrf"}">
-    <img src="${"./techstack/raspberry-pi.svg"}" alt="${"raspberry"}" class="${"svelte-1ignxrf"}">
-    <img src="${"./techstack/socket.svg"}" alt="${"socket"}" class="${"svelte-1ignxrf"}">
-    <img src="${"./techstack/svelte-icon.svg"}" alt="${"svelte"}" class="${"svelte-1ignxrf"}">
-    <img src="${"./techstack/threejs.svg"}" alt="${"threejs"}" class="${"svelte-1ignxrf"}">
-    <img src="${"./techstack/spring-icon.svg"}" alt="${"spring-boot"}" class="${"svelte-1ignxrf"}">
-    <img src="${"./techstack/tensorflow.svg"}" alt="${"tensorflow"}" class="${"svelte-1ignxrf"}"></div>
+  return `<div class="${"content-wrapper svelte-14tx834"}"><hr class="${"svelte-14tx834"}">
+    <div class="${"svelte-14tx834"}"><img src="${"./techstack/appium.svg"}" alt="${"appiumn"}" class="${"svelte-14tx834"}">
+        <img src="${"./techstack/figma.svg"}" alt="${"figma"}" class="${"svelte-14tx834"}">
+        <img src="${"./techstack/git-icon.svg"}" alt="${"git"}" class="${"svelte-14tx834"}">
+        <img src="${"./techstack/java.svg"}" alt="${"java"}" class="${"svelte-14tx834"}">
+        <img src="${"./techstack/javascript.svg"}" alt="${"js"}" class="${"svelte-14tx834"}">
+        <img src="${"./techstack/nodejs-icon.svg"}" alt="${"node"}" class="${"svelte-14tx834"}">
+        <img src="${"./techstack/python.svg"}" alt="${"python"}" class="${"svelte-14tx834"}">
+        <img src="${"./techstack/raspberry-pi.svg"}" alt="${"raspberry"}" class="${"svelte-14tx834"}">
+        <img src="${"./techstack/socket.svg"}" alt="${"socket"}" class="${"svelte-14tx834"}">
+        <img src="${"./techstack/svelte-icon.svg"}" alt="${"svelte"}" class="${"svelte-14tx834"}">
+        <img src="${"./techstack/threejs.svg"}" alt="${"threejs"}" class="${"svelte-14tx834"}">
+        <img src="${"./techstack/spring-icon.svg"}" alt="${"spring-boot"}" class="${"svelte-14tx834"}">
+        <img src="${"./techstack/tensorflow.svg"}" alt="${"tensorflow"}" class="${"svelte-14tx834"}"></div>
 </div>`;
 });
 var about_svelte_svelte_type_style_lang = "";
@@ -59,7 +56,7 @@ const LatestArticle = create_ssr_component(($$result, $$props, $$bindings, slots
   return `<div class="${"post-wrapper svelte-1vsd3wn"}"><p class="${"date svelte-1vsd3wn"}">LATEST ${escape(blogAsJSON[0].date)}</p>
         <h1 class="${"svelte-1vsd3wn"}">${escape(blogAsJSON[0].topic)}</h1>
         <p class="${"description svelte-1vsd3wn"}">${escape(blogAsJSON[0].description)}</p>
-        <div class="${"info-wrapper svelte-1vsd3wn"}"><p class="${"read-time svelte-1vsd3wn"}">${escape(readingTime(blogAsJSON[0].description).text)}</p>
+        <div class="${"info-wrapper svelte-1vsd3wn"}"><p class="${"read-time svelte-1vsd3wn"}">${escape(readingTime(blogAsJSON[0].description))}</p>
             <a class="${"tag svelte-1vsd3wn"}" href="${"/blog/" + escape(blogAsJSON[0].tag)}">#${escape(blogAsJSON[0].tag)}</a></div>
 
 </div>`;

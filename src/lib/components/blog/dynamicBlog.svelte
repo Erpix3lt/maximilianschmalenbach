@@ -1,6 +1,7 @@
 <script type="ts">
     import blogAsJSON from './blog.json'
-    import { readingTime } from 'reading-time-estimator';
+    import {readingTime} from './time'
+
 
     let blogAsJSONFiltered = [];
     
@@ -35,7 +36,7 @@
         <p class="date">{post.date}</p>    
         <p class="description">{post.description}</p>
         <div class="info-wrapper">
-            <p class="read-time">{readingTime(post.description).text}</p>
+            <p class="read-time">{readingTime(post.description)}</p>
             <a class="tag" href="/blog/{post.tag}">
                 #{post.tag}
             </a>

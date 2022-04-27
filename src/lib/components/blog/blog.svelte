@@ -1,6 +1,7 @@
 <script type="ts">
     import blogAsJSON from './blog.json'
-    import { readingTime } from 'reading-time-estimator';
+    import {readingTime} from './time'
+
 
     function clickHref(href: string){
         console.log("hello");
@@ -25,7 +26,7 @@
             <p class="description">{post.description}</p>
             <div class="info-wrapper">
                 <p class="date">{post.date}</p>
-                <p class="read-time">{readingTime(post.description).text}</p>
+                <p class="read-time">{readingTime(post.description)}</p>
             </div>
         </div>
         </div>

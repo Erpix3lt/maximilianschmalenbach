@@ -3,7 +3,7 @@ export const manifest = {
 	assets: new Set(["favicon.png","profile.png","profilePicture.png","robots.txt","svelte-welcome.png","svelte-welcome.webp","techstack/appium.svg","techstack/figma.svg","techstack/git-icon.svg","techstack/java.svg","techstack/javascript.svg","techstack/nodejs-icon.svg","techstack/python.svg","techstack/raspberry-pi.svg","techstack/socket.svg","techstack/spring-icon.svg","techstack/svelte-icon.svg","techstack/tensorflow.svg","techstack/threejs.svg"]),
 	mimeTypes: {".png":"image/png",".txt":"text/plain",".webp":"image/webp",".svg":"image/svg+xml"},
 	_: {
-		entry: {"file":"start-8ff9f537.js","js":["start-8ff9f537.js","chunks/index-06cb3e88.js"],"css":[]},
+		entry: {"file":"start-bfe8ecf7.js","js":["start-bfe8ecf7.js","chunks/index-06cb3e88.js"],"css":[]},
 		nodes: [
 			() => import('./nodes/0.js'),
 			() => import('./nodes/1.js'),

@@ -6,8 +6,7 @@ import blogAsJSON from './blog/blog.json'
     <hr>
     <div class="content-wrapper">
         <div class="link-wrapper">
-            <a class="links" href="">ABOUT</a>
-            <a class="links" href="">PROJECTS</a>
+            <a class="links" href="./blog/projects">PROJECTS</a>
             <a class="links"href="https://www.instagram.com/maximilianschmalenbach/">INSTAGRAM</a>
             <a class="links" href="https://github.com/Erpix3lt">GITHUB</a>
         </div>

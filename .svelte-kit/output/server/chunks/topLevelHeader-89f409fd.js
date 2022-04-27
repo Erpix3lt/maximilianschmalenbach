@@ -1,5 +1,5 @@
 import { c as create_ssr_component, e as escape, v as validate_component } from "./index-756e41cf.js";
-import { b as blogAsJSON } from "./blog-6dac7dba.js";
+import { b as blogAsJSON } from "./time-32f85e35.js";
 var footer_svelte_svelte_type_style_lang = "";
 const css$3 = {
   code: ".content-wrapper.svelte-eouehi{display:flex;flex-direction:row;align-items:center;justify-content:space-between;flex-wrap:wrap}hr.svelte-eouehi{background-color:#2F5371;height:1px;border:0}div.svelte-eouehi{color:darkgray;font-size:.9em}body.light-mode hr.svelte-eouehi{background-color:#b99b99}body.light-mode p.svelte-eouehi{color:#2c4961}.wave.svelte-eouehi{animation-name:svelte-eouehi-wave-animation;animation-duration:2.5s;animation-iteration-count:infinite;transform-origin:70% 70%;display:inline-block}@keyframes svelte-eouehi-wave-animation{0%{transform:rotate( 0.0deg) }10%{transform:rotate(14.0deg) }20%{transform:rotate(-8.0deg) }30%{transform:rotate(14.0deg) }40%{transform:rotate(-4.0deg) }50%{transform:rotate(10.0deg) }60%{transform:rotate( 0.0deg) }100%{transform:rotate( 0.0deg) }}",
@@ -32,8 +32,7 @@ const css$1 = {
 const LowLevelHeader = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$1);
   return `<hr class="${"svelte-1dmy6lh"}">
-    <div class="${"content-wrapper svelte-1dmy6lh"}"><div class="${"link-wrapper svelte-1dmy6lh"}"><a class="${"links svelte-1dmy6lh"}" href="${""}">ABOUT</a>
-            <a class="${"links svelte-1dmy6lh"}" href="${""}">PROJECTS</a>
+    <div class="${"content-wrapper svelte-1dmy6lh"}"><div class="${"link-wrapper svelte-1dmy6lh"}"><a class="${"links svelte-1dmy6lh"}" href="${"./blog/projects"}">PROJECTS</a>
             <a class="${"links svelte-1dmy6lh"}" href="${"https://www.instagram.com/maximilianschmalenbach/"}">INSTAGRAM</a>
             <a class="${"links svelte-1dmy6lh"}" href="${"https://github.com/Erpix3lt"}">GITHUB</a></div>
         <div class="${"dark-mode-button-wrapper"}">${validate_component(DarkModeButton, "DarkModeButton").$$render($$result, {}, {}, {})}</div></div>

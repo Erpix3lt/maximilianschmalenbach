@@ -1,7 +1,6 @@
 <script type="ts">
-    import Post from './post.svelte'
     import blogAsJSON from './blog.json'
-    import { readingTime } from 'reading-time-estimator';
+    import {readingTime} from './time'
 
 
 
@@ -12,7 +11,7 @@
         <h1>{blogAsJSON[0].topic}</h1>
         <p class="description">{blogAsJSON[0].description}</p>
         <div class="info-wrapper">
-            <p class="read-time">{readingTime(blogAsJSON[0].description).text}</p>
+            <p class="read-time">{readingTime(blogAsJSON[0].description)}</p>
             <a class="tag" href="/blog/{blogAsJSON[0].tag}">
                 #{blogAsJSON[0].tag}
             </a>
