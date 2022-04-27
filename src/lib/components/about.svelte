@@ -4,23 +4,27 @@ import WorkingWith from "./workingWith.svelte";
 </script>
 
 <div class="about-wrapper">
+    <div class="sticky">
     <div class="section-header">
         <p>ABOUT</p>
         <hr>
     </div>
     <!-- svelte-ignore a11y-img-redundant-alt -->
-    <h1><mark>HI.</mark></h1>
-    <h3>MaxSchmalenbach.co</h3>
-    <p>
-        Hi I am Max! <br>
-        Currently studying at Th-Koeln, <a class="light-hightlighting" href="https://coco.study/">Code and Context</a> .
-        Interested in design, photography, architecture.
-    </p>
-    <div class="social">
-        <p>The best place to get a hold of me, is to shoot me a dm on
-        <a href="https://www.instagram.com/maximilianschmalenbach/">instagram</a></p>
+    <div >
+        <h1><mark>HI.</mark></h1>
+        <h3>MaxSchmalenbach.co</h3>
+        <p>
+            Hi I am Max! <br>
+            Currently studying at Th-Koeln, <a class="light-hightlighting" href="https://coco.study/">Code and Context</a> .
+            Interested in design, photography, architecture.
+        </p>
+        <div class="social">
+            <p>The best place to get a hold of me, is to shoot me a dm on
+            <a href="https://www.instagram.com/maximilianschmalenbach/">instagram</a></p>
+        </div>
+        <WorkingWith/>
     </div>
-    <WorkingWith/>
+</div>
 </div>
 <style>
     .about-wrapper{
@@ -109,6 +113,13 @@ import WorkingWith from "./workingWith.svelte";
         p{
             font-size: 1em;
         }
+	}
+
+    .sticky{
+		color: white;
+		position: -webkit-sticky;
+    	position: sticky;
+    	top: 0;
 	}
 
 </style>
