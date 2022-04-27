@@ -11,7 +11,9 @@
     <p class="description">{post.description}</p>
     <div class="info-wrapper">
         <p class="read-time">{readingTime(post.description).text}</p>
-        <p class="tag">#{post.tag}</p>
+        <a class="tag" href="/blog/{post.tag}">
+            #{post.tag}
+        </a>
     </div>
 
 </div>
@@ -26,6 +28,7 @@
 .info-wrapper{
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 h1{
     font-size: 5em;
@@ -47,6 +50,7 @@ h1{
     padding-left: 1.5em;
     color: rgb(170, 194, 219);
     font-size: .8em;
+    text-decoration: none;
 }
 
 .read-time{

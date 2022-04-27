@@ -1,4 +1,7 @@
 <script>
+import Scene from "./model/scene.svelte";
+import WorkingWith from "./workingWith.svelte";
+
 </script>
 
 <div class="about-wrapper">
@@ -7,24 +10,54 @@
         <hr>
     </div>
     <!-- svelte-ignore a11y-img-redundant-alt -->
-    <img src="https://i.ibb.co/DLNKz73/profile-Picture.png" alt="profile-Picture"/>
+    <h1><mark>HI.</mark></h1>
     <h3>MaxSchmalenbach.co</h3>
     <p>
         Hi I am Max! <br>
-        Currently studying at Th-Koeln, Code and Context.
+        Currently studying at Th-Koeln, <a class="light-hightlighting" href="https://coco.study/">Code and Context</a> .
         Interested in design, photography, architecture.
     </p>
     <div class="social">
         <p>The best place to get a hold of me, is to shoot me a dm on
         <a href="https://www.instagram.com/maximilianschmalenbach/">instagram</a></p>
     </div>
+    <WorkingWith/>
 </div>
 <style>
     .about-wrapper{
         width: 30%;    
     }
+
+    h1{
+        font-size: 10em;
+        line-height: 0;
+
+    }
+
+    mark{
+        color: white;      
+        background-color: #1d304000;
+    }
+
+    :global(body.light-mode) mark{
+            color: black;
+    }
+
+
+    mark:hover {
+        color: black;
+        background-color: #ffff00;
+    }
+
+
+  
     a{
         color: #FF9C9C;
+        text-decoration: none;
+    }
+
+    .light-hightlighting{
+        color: gray;
         text-decoration: none;
     }
 
@@ -38,10 +71,7 @@
         color: lightgray;
         padding-right: 1em;
     }
-    img{
-        width: 100%;
-        height: auto;
-    }
+
     h3{
         color: white;
         padding-top: 1em;
@@ -71,5 +101,15 @@
     :global(body.light-mode) a{
             color: #7b4949;
     }
+
+    @media screen and (max-width: 992px) {
+		.about-wrapper{
+            width: 100%;
+        }
+
+        p{
+            font-size: 1em;
+        }
+	}
 
 </style>

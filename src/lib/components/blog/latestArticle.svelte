@@ -13,7 +13,9 @@
         <p class="description">{blogAsJSON[0].description}</p>
         <div class="info-wrapper">
             <p class="read-time">{readingTime(blogAsJSON[0].description).text}</p>
-            <p class="tag">#{blogAsJSON[0].tag}</p>
+            <a class="tag" href="/blog/{blogAsJSON[0].tag}">
+                #{blogAsJSON[0].tag}
+            </a>
         </div>
 
 </div>
@@ -27,9 +29,10 @@
 .info-wrapper{
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 h1{
-    font-family: 'PT Serfif',serif;
+    font-family: 'PT MONO',monospace;
     font-size: 6em;
     margin: 0;
     color: white;
@@ -49,6 +52,7 @@ h1{
     padding-left: 1.5em;
     color: rgb(170, 194, 219);
     font-size: .8em;
+    text-decoration: none;
 }
 
 .read-time{
@@ -57,7 +61,6 @@ h1{
 }
 
 :global(body.light-mode) h1{
-    font-family: 'PT Serfif',serif;
     color: #000000;
 }
 
@@ -72,4 +75,29 @@ h1{
     :global(body.light-mode) .read-time{
             color: #538ab7;
     }
+
+    @media screen and (max-width: 992px) {
+		h1{
+            font-size: 4em;
+        }
+
+        .date{
+            font-size: .8em;
+        }
+
+        .read-time{
+            font-size: .8em;
+        }
+
+        .tag{
+            font-size: .8em;
+        }
+
+        .description{
+            font-size: 1.1em;
+        }
+        .post-wrapper{
+            width: 100%;
+        }
+	}
 </style>

@@ -6,11 +6,29 @@
 	import * as THREE from 'three';
 	import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 	import { onMount } from 'svelte';
+import About from '../about.svelte';
+
+	let sceneWidth = 300;
+	let sceneHeight = 300;
+
+	$: outerWidth = 0;
+	$: innerWidth = 0;
+	$: outerHeight = 0;
+	$: innerHeight = 0;
+
+	if(innerWidth < 992){
+		console.log("hello")
+		sceneWidth = innerWidth - 32;		
+	}
+
+	
+	
+	console.log(innerWidth)
 
 	//initiate sceneSetting object, saving dimensions and path
 	let sceneSetting = new Settings(
-		200,
-		400,
+		sceneWidth,
+		sceneHeight,
 		'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1376484/stacy_lightweight.glb'
 	);
 	let character = new Character();
@@ -19,18 +37,13 @@
 	const loader = new GLTFLoader();
 	const scene = new THREE.Scene();
 	const camera = new THREE.PerspectiveCamera(
-		50,
+		40,
 		sceneSetting.displayWidth / sceneSetting.displayHeight,
 		0.1,
 		1000
 	);
 	world.clock = new THREE.Clock();
 	let raycaster = new THREE.Raycaster(); // Used to detect the click on our character
-
-	$: outerWidth = 0;
-	$: innerWidth = 0;
-	$: outerHeight = 0;
-	$: innerHeight = 0;
 
 	async function loadGLTFModel() {
 		await loader.load(
@@ -110,7 +123,7 @@
 	function createScene(el) {
 		world.renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true, canvas: el });
 		world.renderer.shadowMap.enabled = true;
-
+		camera.position.z = -10;
 		initWorld(camera, THREE, scene);
 		resize();
 		animate();

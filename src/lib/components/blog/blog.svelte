@@ -1,8 +1,11 @@
 <script type="ts">
-    import Post from './post.svelte'
     import blogAsJSON from './blog.json'
     import { readingTime } from 'reading-time-estimator';
 
+    function clickHref(href: string){
+        console.log("hello");
+        window.open(href, "_blank");
+    }
 </script>
 
     <div class="post-wrapper">
@@ -15,8 +18,10 @@
         <div class="post-border">
             <div class="item-border">
         
-            <h1>{post.topic}</h1>
-            <p class="tag">#{post.tag}</p>
+            <h1 on:click={() => clickHref(post.link)} style="cursor: pointer;">{post.topic}</h1>
+            <a class="tag" href="/blog/{post.tag}">
+                #{post.tag}
+            </a>
             <p class="description">{post.description}</p>
             <div class="info-wrapper">
                 <p class="date">{post.date}</p>
@@ -53,13 +58,21 @@
 .post-wrapper{
     width: 60%;
 }
+
+
 .info-wrapper{
     display: flex;
     flex-direction: row;
 }
+
+
 h1{
     margin: 0;
     color: white;
+}
+
+h1:hover{
+    color: rgb(218, 218, 218);
 }
 .description{
     color: lightgray;
@@ -92,6 +105,7 @@ hr {
 .tag {
     color: rgb(170, 194, 219);
     font-size: .8em;
+    text-decoration: none;
 }
 
     .read-time{
@@ -101,6 +115,10 @@ hr {
 
     :global(body.light-mode) h1{
         color: #000000;
+    }
+
+:global(body.light-mode) h1:hover{
+        color: #515151;
     }
 
     :global(body.light-mode) hr{
@@ -118,4 +136,41 @@ hr {
     :global(body.light-mode) .read-time{
             color: #538ab7;
     }
+
+    @media screen and (max-width: 992px) {
+		.post-wrapper{
+           width: 100%;
+        }
+
+        .description{
+            color: lightgray;
+            font-size: .9em;
+        }
+
+        .item-border{
+            padding: .2em;
+        }
+
+        .post-border{
+            padding: .2em;
+        }
+
+        h1{
+            font-size: 1.5em;
+        }
+
+        .date{
+            font-size: .7em;
+        }
+
+        .read-time{
+            font-size: .7em;
+        }
+
+        .tag{
+            font-size: .7em;
+        }
+
+
+}
 </style>

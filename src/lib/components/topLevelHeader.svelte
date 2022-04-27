@@ -20,4 +20,10 @@
     :global(body.light-mode) a{
             color: #7b4949;
     }
+
+    @media screen and (max-width: 992px) {
+		h2{
+            font-size: 1.2em;
+        }
+	}
 </style>

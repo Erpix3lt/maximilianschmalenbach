@@ -31,7 +31,7 @@
 	}
 	:global(body) {
 		font-family: 'Montserrat', sans-serif;
-		background-color: #1d3040;
+		background-color: #0c141a;
 	}
 
 	:global(body.light-mode) {

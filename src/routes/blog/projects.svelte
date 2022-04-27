@@ -5,7 +5,7 @@
 <style>
 	:global(body) {
 		font-family: 'Courier New', Courier, monospace;
-		background-color: #1d3040;
+		background-color: #0c141a;
 		color: white;
 	}
 </style>

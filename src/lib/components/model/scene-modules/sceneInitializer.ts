@@ -1,7 +1,7 @@
 export function initWorld(camera: THREE.PerspectiveCamera, THREE, scene){
 	camera.position.z = 30;
 	camera.position.x = 0;
-	camera.position.y = -3;
+	camera.position.y = -5;
 
 	// Floor
 	let floorGeometry = new THREE.PlaneGeometry(5000, 5000, 1, 1);

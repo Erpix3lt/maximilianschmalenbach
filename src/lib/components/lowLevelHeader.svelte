@@ -68,4 +68,18 @@ import blogAsJSON from './blog/blog.json'
     :global(body.light-mode) a{
             color: #1d3040;
     }
+
+    @media screen and (max-width: 992px) {
+		.links{
+            padding-right: 1em;
+            font-size: .8em;
+        }
+
+        .tag{
+            font-size: .8em;
+        }
+
+
+
+	}
 </style>

@@ -10,7 +10,7 @@
         console.log("id" + id)
         const post = blogAsJSON;
         post.forEach(entry => {
-            if(entry.id == id){
+            if(entry.id == parseInt(id)){
                 entryById = entry;
             }
         });
@@ -54,7 +54,7 @@
 	}
 	:global(body) {
 		font-family: 'Montserrat', sans-serif;
-		background-color: #1d3040;
+		background-color: #0c141a;
 	}
 
 	:global(body.light-mode) {
