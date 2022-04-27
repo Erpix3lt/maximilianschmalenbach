@@ -12,7 +12,7 @@
         <p class="description">{blogAsJSON[0].description}</p>
         <div class="info-wrapper">
             <p class="read-time">{readingTime(blogAsJSON[0].description)}</p>
-            <a class="tag" href="/blog/{blogAsJSON[0].tag}">
+            <a class="tag" href="https://maxschmalenbach.herokuapp.com/blog/{blogAsJSON[0].tag}">
                 #{blogAsJSON[0].tag}
             </a>
         </div>

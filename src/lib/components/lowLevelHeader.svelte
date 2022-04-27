@@ -6,7 +6,7 @@ import blogAsJSON from './blog/blog.json'
     <hr>
     <div class="content-wrapper">
         <div class="link-wrapper">
-            <a class="links" href="./blog/projects">PROJECTS</a>
+            <a class="links" href="https://maxschmalenbach.herokuapp.com/blog/projects">PROJECTS</a>
             <a class="links"href="https://www.instagram.com/maximilianschmalenbach/">INSTAGRAM</a>
             <a class="links" href="https://github.com/Erpix3lt">GITHUB</a>
         </div>
@@ -16,13 +16,13 @@ import blogAsJSON from './blog/blog.json'
     </div>
     <hr>
     <div class="latest-tags-wrapper">
-        <a class="tag" href="/blog/{blogAsJSON[0].tag}">
+        <a class="tag" href="https://maxschmalenbach.herokuapp.com/blog//{blogAsJSON[0].tag}">
             #{blogAsJSON[0].tag}
         </a>
-        <a class="tag" href="/blog/{blogAsJSON[1].tag}">
+        <a class="tag" href="https://maxschmalenbach.herokuapp.com/blog//{blogAsJSON[1].tag}">
             #{blogAsJSON[1].tag}
         </a>
-        <a class="tag" href="/blog/{blogAsJSON[2].tag}">
+        <a class="tag" href="https://maxschmalenbach.herokuapp.com/blog//{blogAsJSON[2].tag}">
             #{blogAsJSON[2].tag}
         </a>
     </div>

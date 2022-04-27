@@ -37,7 +37,7 @@
         <p class="description">{post.description}</p>
         <div class="info-wrapper">
             <p class="read-time">{readingTime(post.description)}</p>
-            <a class="tag" href="/blog/{post.tag}">
+            <a class="tag" href="https://maxschmalenbach.herokuapp.com/blog/{post.tag}">
                 #{post.tag}
             </a>
         </div>

@@ -1,7 +1,7 @@
 <script>
 
 </script>
-    <a href="./"><h2>MaxSchmalenbach</h2></a>
+    <a href="https://maxschmalenbach.herokuapp.com/"><h2>MaxSchmalenbach</h2></a>
 <style>
     h2{
         padding-top: .8em;

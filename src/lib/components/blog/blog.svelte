@@ -20,7 +20,7 @@
             <div class="item-border">
         
             <h1 on:click={() => clickHref(post.link)} style="cursor: pointer;">{post.topic}</h1>
-            <a class="tag" href="/blog/{post.tag}">
+            <a class="tag" href="https://maxschmalenbach.herokuapp.com/blog/{post.tag}">
                 #{post.tag}
             </a>
             <p class="description">{post.description}</p>
