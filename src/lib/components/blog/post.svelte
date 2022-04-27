@@ -73,4 +73,33 @@ h1{
     :global(body.light-mode) .read-time{
             color: #538ab7;
     }
+
+    @media screen and (max-width: 992px) {
+		.post-wrapper{
+           width: 100%;
+        }
+
+        .description{
+            color: lightgray;
+            font-size: .9em;
+        }
+
+        h1{
+            font-size: 1.5em;
+        }
+
+        .date{
+            font-size: .7em;
+        }
+
+        .read-time{
+            font-size: .7em;
+        }
+
+        .tag{
+            font-size: .7em;
+        }
+
+
+}
 </style>

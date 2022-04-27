@@ -37,4 +37,10 @@
 	:global(body.light-mode) {
 		background-color: #DFCECD;
 	}
+
+    @media screen and (max-width: 992px) {
+		.content-wrapper{
+			width: 95%;
+        }
+	}
 </style>
