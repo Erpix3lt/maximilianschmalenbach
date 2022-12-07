@@ -1,5 +1,3 @@
-Personal Blog
+## Meine kleiner Blog
 
---> https://maxschmalenbach.herokuapp.com/
-
-git push heroku main                    
+*Hier sind Projekte aufgelistet an denen ich gearbeitet habe, ich versuche alles up to date zu halten.*
