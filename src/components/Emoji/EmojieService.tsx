@@ -1,9 +1,8 @@
 'use client'
 
-// components/SmileyService.tsx
 import { useState } from 'react';
-import SmileyInput from './SmileyInput';
-import SmileyGallery from './SmileyGallery';
+import SmileyInput from './EmojiInput';
+import SmileyGallery from './Emojis';
 
 // Define the list of smileys
 const smileyList = ['😊', '😄', '😍', '🤩', '😎', '🥳', '😇', '😂', '🤣', '😇'];
@@ -26,7 +25,7 @@ const SmileyService = () => {
         remainingCount={remainingCount}
         smileyList={smileyList}
       />
-      <SmileyGallery gallery={gallery} />
+      <SmileyGallery />
     </div>
   );
 };
