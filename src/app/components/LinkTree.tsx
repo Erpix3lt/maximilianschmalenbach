@@ -7,7 +7,7 @@ import Draggable from 'react-draggable'
 const LinkTree = () => {
     return (
         <Draggable>
-            <ul className='text-xs text-blue-500 font-serif'>
+            <ul className='text-xs text-red-500 font-serif'>
                 <li><Link href="https://github.com/Erpix3lt">https://github.com/Erpix3lt</Link></li>
                 <li><Link href="https://git.coco.study/mschmal2/thesis">https://git.coco.study/mschmal2/thesis</Link></li>
                 <li><Link href="https://garments.digital/">https://garments.digital/</Link></li>
