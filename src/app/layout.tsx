@@ -1,11 +1,8 @@
-// Import necessary modules and styles
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import Image from 'next/image'
-import Sketch from '@/app/components/Pong';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -19,21 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className=''>
-        {/* <Image
-          alt="Mountains"
-          src="/background.png"
-          quality={100}
-          fill
-          sizes="100vw"
-          style={{
-            objectFit: 'cover',
-          }}
-        />         */}
-        <div className="m-5">
-          {children}
-        </div>
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   )
 }
