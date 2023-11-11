@@ -7,7 +7,7 @@ interface SmallWrapperProps {
 
 const SmallWrapper: React.FC<SmallWrapperProps> = ({ children }) => {
   return (
-    <div className="border border-black rounded-lg">
+    <div className="border border-black rounded-lg max-w-fit">
       {children}
     </div>
   );

@@ -1,6 +1,7 @@
 // components/Posts.tsx
 import React from 'react';
 import Post from '@/app/components/blog/Post';
+import LargeWrapper from '../wrapper/LargeWrapper';
 
 const exampleData = [
   {
@@ -18,20 +19,49 @@ const exampleData = [
       'This is part of my sixth semester at Code & Context. We are working on a digital Space, enabling the User to prototype their own garments, with the use of three.js. We are hoping to democratize the process of designing clothing, both in the digital and analog world.',
     imageSrc: '/images/navbar/home.png', // Example URL
   },
+  {
+    id: 2,
+    caption: 'Garments Digital',
+    content:
+      'This is part of my sixth semester at Code & Context. We are working on a digital Space, enabling the User to prototype their own garments, with the use of three.js. We are hoping to democratize the process of designing clothing, both in the digital and analog world.',
+    imageSrc: '/images/navbar/home.png', // Example URL
+  },
+  {
+    id: 2,
+    caption: 'Garments Digital',
+    content:
+      'This is part of my sixth semester at Code & Context. We are working on a digital Space, enabling the User to prototype their own garments, with the use of three.js. We are hoping to democratize the process of designing clothing, both in the digital and analog world.',
+    imageSrc: '/images/navbar/home.png', // Example URL
+  },
+  {
+    id: 2,
+    caption: 'Garments Digital',
+    content:
+      'This is part of my sixth semester at Code & Context. We are working on a digital Space, enabling the User to prototype their own garments, with the use of three.js. We are hoping to democratize the process of designing clothing, both in the digital and analog world.',
+    imageSrc: '/images/navbar/home.png', // Example URL
+  },
+  {
+    id: 2,
+    caption: 'Garments Digital',
+    content:
+      'This is part of my sixth semester at Code & Context. We are working on a digital Space, enabling the User to prototype their own garments, with the use of three.js. We are hoping to democratize the process of designing clothing, both in the digital and analog world.',
+    imageSrc: '/images/navbar/home.png', // Example URL
+  },
 ];
 
 const Posts: React.FC = () => {
   return (
-    <div>
+    <LargeWrapper>
       {exampleData.map((post) => (
-        <Post
-          key={post.id}
+        <div key={post.id} className='mb-2'>
+        <Post       
           imageSrc={post.imageSrc}
           textContent={post.content}
           caption={post.caption}
         />
+        </div>
       ))}
-    </div>
+    </LargeWrapper>
   );
 };
 
