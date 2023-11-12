@@ -9,7 +9,7 @@ interface GreenLinkProps {
 
 const GreenLink: React.FC<GreenLinkProps> = ({ href, children }) => {
   return (
-    <Link className='text-lime-300 hover:text-lime-500 underline' href={href}>
+    <Link className='text-green-300 hover:text-fuchsia-300 underline' href={href}>
       {children}
     </Link>
   );

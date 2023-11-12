@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  color: white;
-  background: rgb(231,183,239);
-  /* insert bg */
-}
+
+body  {
+  color: #ffffff;
+  background-color: #000000;
+ }

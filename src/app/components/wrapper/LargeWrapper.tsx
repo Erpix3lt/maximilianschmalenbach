@@ -7,7 +7,7 @@ interface LargeWrapperProps {
 
 const LargeWrapper: React.FC<LargeWrapperProps> = ({ children }) => {
   return (
-    <div className="border border-gray-800 rounded-full p-0">
+    <div className="border border-gray-600 rounded-full p-0 hover:shadow-fuchsia transition-all duration-1000 ease-in-out cursor-pointer">
       {children}
     </div>
   );

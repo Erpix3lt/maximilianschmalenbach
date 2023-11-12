@@ -1,67 +1,27 @@
 // components/Posts.tsx
 import React from 'react';
-import Post from '@/app/components/blog/Post';
-import LargeWrapper from '../wrapper/LargeWrapper';
+import PostPreview from '@/app/components/blog/PostPreview';
+import { cookies } from "next/headers"
+import { createServerComponentClient } from "@supabase/auth-helpers-nextjs"
 
-const exampleData = [
-  {
-    id: 1,
-    caption: 'What about digital fashion',
-    content:
-      'This website is part of my bachelor thesis “What about digital fashion”, in which I want to explore the look of future digital fashion artefacts, in a participatory way! You are now invited to take part in a survey, creating digital clothing items on your own. After that you can also rate the creative artefacts of other people. Please try to stay true to yourself and be creative. Thanks for taking the time!'
-      ,
-    imageSrc: '/images/navbar/home.png', // Example URL
-  },
-  {
-    id: 2,
-    caption: 'Garments Digital',
-    content:
-      'This is part of my sixth semester at Code & Context. We are working on a digital Space, enabling the User to prototype their own garments, with the use of three.js. We are hoping to democratize the process of designing clothing, both in the digital and analog world.',
-    imageSrc: '/images/navbar/home.png', // Example URL
-  },
-  {
-    id: 2,
-    caption: 'Garments Digital',
-    content:
-      'This is part of my sixth semester at Code & Context. We are working on a digital Space, enabling the User to prototype their own garments, with the use of three.js. We are hoping to democratize the process of designing clothing, both in the digital and analog world.',
-    imageSrc: '/images/navbar/home.png', // Example URL
-  },
-  {
-    id: 2,
-    caption: 'Garments Digital',
-    content:
-      'This is part of my sixth semester at Code & Context. We are working on a digital Space, enabling the User to prototype their own garments, with the use of three.js. We are hoping to democratize the process of designing clothing, both in the digital and analog world.',
-    imageSrc: '/images/navbar/home.png', // Example URL
-  },
-  {
-    id: 2,
-    caption: 'Garments Digital',
-    content:
-      'This is part of my sixth semester at Code & Context. We are working on a digital Space, enabling the User to prototype their own garments, with the use of three.js. We are hoping to democratize the process of designing clothing, both in the digital and analog world.',
-    imageSrc: '/images/navbar/home.png', // Example URL
-  },
-  {
-    id: 2,
-    caption: 'Garments Digital',
-    content:
-      'This is part of my sixth semester at Code & Context. We are working on a digital Space, enabling the User to prototype their own garments, with the use of three.js. We are hoping to democratize the process of designing clothing, both in the digital and analog world.',
-    imageSrc: '/images/navbar/home.png', // Example URL
-  },
-];
+const Posts: React.FC = async () => {
 
-const Posts: React.FC = () => {
+  const supabase = createServerComponentClient({ cookies })
+  const { data, error } = await supabase.from("blog").select("*")
+  
   return (
-    <LargeWrapper>
-      {exampleData.map((post) => (
+    <div className="border border-gray-600 rounded-full p-0">
+      {data?.map((post) => (
         <div key={post.id} className='mb-2'>
-        <Post       
-          imageSrc={post.imageSrc}
-          textContent={post.content}
+        <PostPreview       
+          thumbnail_url="/images/navbar/home.png"
+          description={post.description}
           caption={post.caption}
+          created_at={post.created_at}
         />
         </div>
       ))}
-    </LargeWrapper>
+    </div>
   );
 };
 
