@@ -7,8 +7,7 @@ export default function Home() {
   return (
     <main className="flex flex-row ">
       <div className="w-96 m-4">
-        <NavBar></NavBar>
-        <div className="mt-4">
+        <div>
           <About></About>
         </div>
         <div className="mt-4">
