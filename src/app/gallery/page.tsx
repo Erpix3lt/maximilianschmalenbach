@@ -1,46 +1,70 @@
 'use client'
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { createClientComponentClient } from "@supabase/auth-helpers-nextjs"
 
-interface PageProps {}
+interface PageProps { }
 
 const Page: React.FC<PageProps> = () => {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+    const supabase = createClientComponentClient()
+    const [selectedImage, setSelectedImage] = useState<string | null>(null);
+    const [imageList, setImageList] = useState<string[]>([]);
 
-  const handleImageClick = (image: string) => {
-    setSelectedImage(image);
-  };
+    useEffect(() => {
+        const fetchImages = async () => {
+            const publicUrls: string[] = [];
+            const { data, error } = await supabase
+                .storage
+                .from('blog-images')
+                .list();
 
-  const imageList: string[] = [
-    'https://gtgxkdjpbzwfhrvpqbnz.supabase.co/storage/v1/object/public/blog-images/00002-17165681-removebg-preview.png',
-    'https://gtgxkdjpbzwfhrvpqbnz.supabase.co/storage/v1/object/public/blog-images/00002-17165681.png?t=2023-11-12T15%3A47%3A41.358Z',
-    'https://gtgxkdjpbzwfhrvpqbnz.supabase.co/storage/v1/object/public/blog-images/00002-17165681.png?t=2023-11-12T15%3A47%3A41.358Z'
-  ];
+            if (error) {
+                console.error('Error fetching storage bucket entries:', error.message);
+            } else {
+                for (const entry of data) {
+                    const { data: publicUrlData } = await supabase
+                        .storage
+                        .from('blog-images')
+                        .getPublicUrl(entry.name);
 
-  return (
-    <main className="flex flex-row">
-      <div className="w-96 m-4">
-        {/* Preview of all images */}
-        <ul>
-          {imageList.map((image, index) => (
-            <li key={index} onClick={() => handleImageClick(image)}>
-              <img  src={image} alt={`Image ${index}`} className="cursor-pointer w-full" />
-            </li>
-          ))}
-        </ul>
-      </div>
-      {/* View of the current clicked image */}
-      <div className="flex-1 m-4">
-        {selectedImage && (
-          <>
-            <img src={selectedImage}  alt="Selected Image" className="w-full h-full" />
-            <p className="mt-2">{`Filename: ${selectedImage}`}</p>
-          </>
-        )}
-      </div>
-    </main>
-  );
+                        const publicUrl = publicUrlData.publicUrl;
+                        publicUrls.push(publicUrl);
+                }
+                setImageList(publicUrls);
+            }
+        };
+
+        fetchImages();
+    }, []); // Empty dependency array means this effect runs once on mount
+
+    const handleImageClick = (image: string) => {
+        setSelectedImage(image);
+    };
+
+    return (
+        <main className="flex flex-row">
+            <div className="w-96 m-4">
+                {/* Preview of all images */}
+                <ul>
+                    {imageList.map((image, index) => (
+                        <li key={index} onClick={() => handleImageClick(image)}>
+                            <Image width={100} height={100} src={image} alt={`Image ${index}`} className="cursor-pointer" />
+                        </li>
+                    ))}
+                </ul>
+            </div>
+            {/* View of the current clicked image */}
+            <div className="flex-1 m-4">
+                {selectedImage && (
+                    <>
+                        <Image width={300} height={300} src={selectedImage} alt="Selected Image" />
+                        <p className="mt-2">{`Filename: ${selectedImage}`}</p>
+                    </>
+                )}
+            </div>
+        </main>
+    );
 };
 
 export default Page;
