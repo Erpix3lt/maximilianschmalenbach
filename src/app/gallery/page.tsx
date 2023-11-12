@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs"
+import ImagePreview from '@/app/components/gallery/ImagePreview';
+import ClickedImageView from '../components/gallery/ClickedImageView';
 
 interface PageProps { }
 
@@ -44,24 +46,13 @@ const Page: React.FC<PageProps> = () => {
 
     return (
         <main className="flex flex-row">
-            <div className="w-96 m-4">
+            <div className="w-96 m-4 max-h-screen overflow-y-scroll">
                 {/* Preview of all images */}
-                <ul>
-                    {imageList.map((image, index) => (
-                        <li key={index} onClick={() => handleImageClick(image)}>
-                            <Image width={100} height={100} src={image} alt={`Image ${index}`} className="cursor-pointer" />
-                        </li>
-                    ))}
-                </ul>
+                <ImagePreview imageList={imageList} onImageClick={handleImageClick}></ImagePreview>
             </div>
             {/* View of the current clicked image */}
-            <div className="flex-1 m-4">
-                {selectedImage && (
-                    <>
-                        <Image width={300} height={300} src={selectedImage} alt="Selected Image" />
-                        <p className="mt-2">{`Filename: ${selectedImage}`}</p>
-                    </>
-                )}
+            <div className="flex-1 flex items-center justify-center">
+                <ClickedImageView selectedImage={selectedImage} ></ClickedImageView>
             </div>
         </main>
     );
