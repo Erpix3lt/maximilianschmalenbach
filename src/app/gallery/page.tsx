@@ -46,7 +46,7 @@ const Page: React.FC<PageProps> = () => {
 
     return (
         <main className="flex flex-row">
-            <div className="w-96 m-4 max-h-screen overflow-y-scroll">
+            <div className="w-96 p-4 max-h-screen overflow-y-scroll scrollbar-hidden">
                 {/* Preview of all images */}
                 <ImagePreview imageList={imageList} onImageClick={handleImageClick}></ImagePreview>
             </div>

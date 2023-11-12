@@ -6,7 +6,7 @@ import Led from './components/three/led';
 export default function Home() {
   return (
     <main className="flex flex-row ">
-      <div className="w-96 m-4">
+      <div className="w-110 max-h-screen overflow-y-scroll scrollbar-hidden p-4">
         <div>
           <About></About>
         </div>

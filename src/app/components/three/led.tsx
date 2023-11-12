@@ -3,7 +3,7 @@ import React from 'react'
 
 const led = () => {
   return (
-    <div><Image alt='3d' src="/untitled.gif" width={300} height={300}></Image></div>
+    <div className='flex justify-center items-center w-full'><Image alt='3d' src="/untitled.gif" width={300} height={300}></Image></div>
   )
 }
 

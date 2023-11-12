@@ -6,9 +6,9 @@ import SmallWrapper from './wrapper/SmallWrapper';
 const NavBar = () => {
   return (
     <div className='flex flex-row gap-4'>
-        <SmallWrapper><Link href="/">Home</Link></SmallWrapper>
-        <SmallWrapper><Link href="/gallery">Gallery</Link></SmallWrapper>
-        <SmallWrapper><Link href="https://git.coco.study/mschmal2/thesis">Thesis</Link></SmallWrapper>
+        <SmallWrapper><Link className='font-serif' href="/">Home</Link></SmallWrapper>
+        <SmallWrapper><Link className='font-serif' href="/gallery">Gallery</Link></SmallWrapper>
+        <SmallWrapper><Link className='font-serif' href="https://git.coco.study/mschmal2/thesis">Thesis</Link></SmallWrapper>
     </div>
   )
 }
