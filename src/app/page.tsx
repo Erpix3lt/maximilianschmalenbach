@@ -1,5 +1,5 @@
 import About from "./components/About";
-import NavBar from "./components/NavBar";
+import ClickedPostView from "./components/blog/ClickedPostView";
 import Posts from "./components/blog/Posts";
 import Led from './components/three/led';
 
@@ -14,7 +14,7 @@ export default function Home() {
           <Posts></Posts>
         </div>
       </div>
-      <Led></Led>
-´    </main>
+      <ClickedPostView></ClickedPostView>
+    </main>
   )
 }

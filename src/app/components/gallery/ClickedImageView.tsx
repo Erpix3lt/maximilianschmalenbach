@@ -2,7 +2,6 @@
 import React from 'react';
 import Image from 'next/image';
 import SmallWrapper from '../wrapper/SmallWrapper';
-import LargeWrapper from '../wrapper/LargeWrapper';
 
 interface ClickedImageViewProps {
   selectedImage: string | null;
