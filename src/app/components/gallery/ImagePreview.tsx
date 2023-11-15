@@ -14,7 +14,7 @@ const ImagePreview: React.FC<ImagePreviewProps> = ({ imageList, onImageClick }) 
             {imageList.map((image, index) => (
                 <SmallWrapper key={index}>
                     <div onClick={() => onImageClick(image)} className="cursor-pointer">
-                        <Image width={384} height={384} src={image} alt={`Image ${index}`} className="rounded-md" />
+                        <img width={384} height={384} src={image} alt={`Image ${index}`} className="rounded-md" />
                     </div>
                 </SmallWrapper>
             ))}

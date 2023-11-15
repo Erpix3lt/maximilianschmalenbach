@@ -9,6 +9,10 @@ const Posts: React.FC = async () => {
   const supabase = createServerComponentClient({ cookies })
   const { data, error } = await supabase.from("blog").select("*")
 
+  if (error) {
+    console.error(error);
+  }
+
   function convertTimestampToFormattedDate(timestamp: string): string {
     const date = new Date(timestamp);
     const options: Intl.DateTimeFormatOptions = {
@@ -25,10 +29,14 @@ const Posts: React.FC = async () => {
       {data?.map((post) => (
         <div key={post.id} className='mb-2'>
         <PostPreview       
-          thumbnail_url="/images/navbar/home.png"
-          description={post.description}
-          caption={post.caption}
-          created_at={convertTimestampToFormattedDate(post.created_at)}
+          post={{
+            caption: post.caption,
+            created_at: convertTimestampToFormattedDate(post.created_at),
+            description: post.description,
+            thumbnail_url: post.thumbnail_url,
+            image_urls: post.image_urls,
+            link_urls: post.link_urls,
+          }}
         />
         </div>
       ))}

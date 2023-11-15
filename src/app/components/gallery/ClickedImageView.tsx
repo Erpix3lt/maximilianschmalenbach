@@ -19,8 +19,7 @@ const ClickedImageView: React.FC<ClickedImageViewProps> = ({ selectedImage }) =>
     <div >
       {selectedImage && (
         <div>
-          <Image width={500} height={500} src={selectedImage} alt="Selected Image" className="rounded-md" />
-
+          <img src={selectedImage} alt="Selected Image" className="rounded-md" />
           <SmallWrapper> <p className="text-xs text-white font-serif">{`${filename}`}</p></SmallWrapper>
           </div>
       )}
