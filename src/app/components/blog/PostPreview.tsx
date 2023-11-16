@@ -22,20 +22,14 @@ type Post = {
 const PostPreview: React.FC<PostProps> = ({ post }) => {
 
 
-  const handleClick = () => {
+  const handleClick = (currentPost: Post) => {
+    console.log("clicked", currentPost)
     // Set the post in the Zustand store when the component is clicked
-    usePostStore.setState({      post: {
-      caption: 'New Caption',
-      created_at: '2023-01-01',
-      description: 'New Description',
-      thumbnail_url: 'new_thumbnail_url.jpg',
-      image_urls: ['new_image_url.jpg'],
-      link_urls: ['https://example.com/new'],
-    }, });
+    usePostStore.setState({      post: currentPost, });
   };
   
   return (
-    <div onClick={handleClick}>
+    <div onClick={()=>{handleClick(post)}}>
       <LargeWrapper>
         <h2 className='text-lg font-serif mb-2'>{post.created_at}</h2>
         <SmallWrapper>
