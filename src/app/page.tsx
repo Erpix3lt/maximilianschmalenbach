@@ -14,12 +14,7 @@ export default function Home() {
           <Posts></Posts>
         </div>
       </div>
-      <ClickedPostView
-        caption="Garments Digital"
-        link_urls={["https://garments.digital"]}
-        description="heheheheheheheh"
-        image_urls={["/Shirt1.png"]}
-      ></ClickedPostView>
+      <ClickedPostView></ClickedPostView>
     </main>
   );
 }
