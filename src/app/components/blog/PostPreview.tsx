@@ -22,7 +22,6 @@ const PostPreview: React.FC<PostProps> = ({ post }) => {
 
 
   const handleClick = (currentPost: Post) => {
-    console.log("clicked", currentPost)
     // Set the post in the Zustand store when the component is clicked
     usePostStore.setState({      post: currentPost, });
   };

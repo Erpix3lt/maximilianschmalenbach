@@ -19,7 +19,7 @@ const ClickedPostView: React.FC = () => {
         {post.link_urls !== null && post.link_urls.map((link, index) => (
           <SmallWrapper key={index}>
             <Link className='font-serif' href={link}>
-              Visit →
+              {link}
             </Link>
           </SmallWrapper>
         ))}
