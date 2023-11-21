@@ -6,7 +6,7 @@ export default function Home() {
 
   return (
     <main className="flex flex-row ">
-      <div className="w-110 max-h-screen overflow-y-scroll scrollbar-hidden p-4">
+      <div className="w-1/4 ml-4 pt-16 max-h-screen overflow-y-scroll scrollbar-hidden sticky top-0">
         <div>
           <About></About>
         </div>
@@ -14,7 +14,9 @@ export default function Home() {
           <Posts></Posts>
         </div>
       </div>
-      <ClickedPostView></ClickedPostView>
+      <div className="w-3/4 pt-4">
+        <ClickedPostView ></ClickedPostView>
+      </div>
     </main>
   );
 }

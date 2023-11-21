@@ -1,15 +1,16 @@
 import React from 'react'
-import Image from 'next/image';
 import Link from 'next/link';
 import SmallWrapper from './wrapper/SmallWrapper';
+import LargeWrapper from './wrapper/LargeWrapper';
 
 const NavBar = () => {
   return (
-    <div className='flex flex-row gap-4'>
-        <SmallWrapper><Link className='font-serif' href="/">Home</Link></SmallWrapper>
-        <SmallWrapper><Link className='font-serif' href="/gallery">Gallery</Link></SmallWrapper>
-        <SmallWrapper><Link className='font-serif' href="https://git.coco.study/mschmal2/thesis">Thesis</Link></SmallWrapper>
-    </div>
+    <LargeWrapper>
+      <div className='flex flex-row gap-4'>
+          <SmallWrapper><Link className='font-serif' href="/">Home</Link></SmallWrapper>
+          <SmallWrapper><Link className='font-serif' href="https://git.coco.study/mschmal2/thesis">Thesis</Link></SmallWrapper>
+      </div>
+    </LargeWrapper>
   )
 }
 

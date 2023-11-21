@@ -11,7 +11,7 @@ const nextConfig = {
         remotePatterns: [
           {
             protocol: 'https',
-            hostname: removeHttps(process.env.NEXT_PUBLIC_SUPABASE_URL),
+            hostname: 'images.unsplash.com',
           },
         ],
     }

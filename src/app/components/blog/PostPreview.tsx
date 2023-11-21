@@ -3,7 +3,6 @@
 import React from 'react';
 import SmallWrapper from '@/app/components/wrapper/SmallWrapper';
 import LargeWrapper from '@/app/components/wrapper/LargeWrapper';
-import Image from 'next/image';
 import { usePostStore } from '@/app/stores/PostStore';
 
 interface PostProps {
@@ -36,16 +35,6 @@ const PostPreview: React.FC<PostProps> = ({ post }) => {
           <p className="text-sm text-white-100 font-serif">{post.caption}</p>
         </SmallWrapper>
         <div>
-          {/* Image displayed only on hover */}
-          <Image
-            src={post.thumbnail_url}
-            alt="Post Image"
-            className="hidden hover:block"
-            width={300}
-            height={300}
-          />
-
-          {/* Text always displayed */}
           <div className="text-white-100 mt-1">
             <p className='text-xs font-serif'>{post.description}</p>
           </div>

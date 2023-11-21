@@ -1,4 +1,3 @@
-// components/Posts.tsx
 import React from 'react';
 import PostPreview from '@/app/components/blog/PostPreview';
 import { cookies } from "next/headers"
@@ -11,6 +10,7 @@ const Posts: React.FC = async () => {
 
   if (error) {
     console.error(error);
+    return null; // Handle error gracefully
   }
 
   function convertTimestampToFormattedDate(timestamp: string): string {
@@ -23,21 +23,28 @@ const Posts: React.FC = async () => {
   
     return date.toLocaleDateString('de', options);
   }
-  
+
+  // Sort the posts by date in descending order
+  const sortedPosts = data?.sort((a, b) => {
+    const dateA = new Date(a.created_at).getTime();
+    const dateB = new Date(b.created_at).getTime();
+    return dateB - dateA;
+  });
+
   return (
     <div className="border border-gray-600 rounded-full p-0">
-      {data?.map((post) => (
+      {sortedPosts?.map((post) => (
         <div key={post.id} className='mb-2'>
-        <PostPreview       
-          post={{
-            caption: post.caption,
-            created_at: convertTimestampToFormattedDate(post.created_at),
-            description: post.description,
-            thumbnail_url: post.thumbnail_url,
-            image_urls: post.image_urls,
-            link_urls: post.link_urls,
-          }}
-        />
+          <PostPreview       
+            post={{
+              caption: post.caption,
+              created_at: convertTimestampToFormattedDate(post.created_at),
+              description: post.description,
+              thumbnail_url: post.thumbnail_url,
+              image_urls: post.image_urls,
+              link_urls: post.link_urls,
+            }}
+          />
         </div>
       ))}
     </div>
